@@ -16,7 +16,7 @@ const fs = require("fs");
 
 export default (req, res, next) => {
 
-    // point to the html file created by CRA's build tool
+    // pointing  to the html file created by CRA's build tool
     const filePath = path.resolve(__dirname, '..', '..', 'build', 'index.html');
 
     fs.readFile(filePath, 'utf8', (err, htmlData) => {
@@ -32,10 +32,10 @@ export default (req, res, next) => {
         
         sagaMiddleware.run(rootSaga)
         
-        // render the app as a string
+        // rendering the app as a string 
         const html = ReactDOMServer.renderToString(<Provider store={store}><App /></Provider>);
 
-        // inject the rendered app into our html and send it   
+        // injecting the rendered app into html and sending it   
         return res.send(
             htmlData.replace(
                 '<div id="root"></div>',

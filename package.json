@@ -27,7 +27,7 @@
     "redux-saga": "^1.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_ENV=production BABEL_ENV=production node server/bootstrap.js node server/bootstrap.js",
     "serve": "NODE_ENV=production BABEL_ENV=production node server/bootstrap.js node server/bootstrap.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
