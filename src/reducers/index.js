@@ -1,4 +1,4 @@
-import {GET_NEWS_SUCESS } from '../actions/constants'
+import {GET_NEWS_SUCESS, GET_NEWS } from '../actions/constants'
 
 
 const initState = {
@@ -12,7 +12,7 @@ const newsReducer= (state = initState,action)=>{
       let newState={...state};
       newState["newsList"]=action.result;
       return newState;
- 		case GET_NEWS:
+ 	case GET_NEWS:
      newState["pageNumber"]=action.pageNumber;
       return newState;
     default:
