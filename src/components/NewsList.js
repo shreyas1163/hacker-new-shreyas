@@ -3,23 +3,32 @@ import { connect } from 'react-redux';
 
 import { getNews } from '../actions';
 
-import {Container,Col} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 
 import NewsListDisplay from '../containers/NewsListDisplayComponent';
 import GraphDisplay from '../containers/graphDisplayComponent';
-
+import {BackButton } from '../containers/styleComponent';
 
 class NewsList extends Component {
   constructor(props) {
     super(props);
     this.state={
       pageNumber:0,
-      newsDetails:''
+      newsDetails:{}
     }
   }
   
   componentDidMount() {
     this.props.getNews(this.props.pageNumber);
+  }
+  nextPage=()=> {
+    console.log("hello");
+    let newPageNumber=this.props.pageNumber+1
+    this.props.getNews(newPageNumber);
+  }
+  previousPage=()=> {
+    let oldPageNumber=this.props.pageNumber-1
+    this.props.getNews(oldPageNumber);
   }
 
   componentDidUpdate(prevProps) {
@@ -32,24 +41,22 @@ class NewsList extends Component {
   }
 
   render() {
+    let visibilityFirst = (this.props.newsData.nbPages === this.props.pageNumber) ? "hidden" : "visible";
+    let visibilityLast = (this.props.pageNumber === 0) ? "hidden" : "visible";
+    console.log(this.props.pageNumber);
     return (
       <Container fluid={"md"} >
-        <div className="row row-cols-2">
-          <Col ColSize={10}> 1 of 4</Col>
-          <div className="col bg-warning">2 of 4</div>
-          <div className="col bg-success">3 of 4</div>
-          <div className="col bg-warning">4 of 4</div>
-        </div>
-
-        <div className='row-s-8'>
-          <NewsListDisplay/>  
-        </div>
-                
-        {/* <button onclick={()=>{previousPage}}>Previous Page</button>
-        <button onclick={()=>{nextPage}}>Next Page</button><div></div> */}
-        <div className='container'>
+        <Container>
+            <NewsListDisplay displayData={this.props.newsData.hits}/> 
+        </Container>
+        <BackButton onClick={()=>{this.nextPage()}}  visibility={visibilityFirst} float={`right`}>Next Page</BackButton>
+        <BackButton onClick={()=>{this.previousPage()}}  visibility={visibilityLast} margin-right={`10%`}float={`right`}>Previous Page</BackButton>
+        <Container>
           <GraphDisplay/>  
-        </div>
+        </Container>
+                
+        
+       
       </Container>     
       )
   }
