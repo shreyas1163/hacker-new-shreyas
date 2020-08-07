@@ -1,0 +1,15 @@
+.table thead th {
+    padding: 0px;
+    background-color: #ff6600;
+    color:black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table  td{
+    padding: 0px;
+    border: none !important;
+    color: black;
+}
+.table tbody+tbody{
+    border-top:0px;
+}

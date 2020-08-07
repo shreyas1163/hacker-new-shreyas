@@ -1,0 +1,14 @@
+a{
+   color:black;
+}
+a:hover
+{
+   color:black;
+}
+a:active
+{
+   color:black;
+}
+.enableCursor{
+   cursor: pointer;
+}

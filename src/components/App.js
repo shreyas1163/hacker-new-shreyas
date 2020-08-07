@@ -1,20 +1,19 @@
 import React,{Component} from 'react';
-import '../assests/css/App.css';
+import { renderRoutes } from 'react-router-config';
 
-import Loadable from 'react-loadable';
+import { Switch} from 'react-router-dom';
 
-const AsyncComponent = Loadable({
-  loader: () => import("./NewsList"),
-  loading: () => <div>loading...</div>,
-});
+import Routes from '../../src/routes';
+
 
 class App extends Component {
   render(){
+    
     return (
       <div className="App">
-        <header className="App-header">        
-        </header>
-        <div><AsyncComponent/></div>
+        <Switch>
+        {renderRoutes(Routes)}
+      </Switch>
       </div>
     );
   }

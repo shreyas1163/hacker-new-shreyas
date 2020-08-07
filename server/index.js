@@ -22,7 +22,7 @@ router.use(express.static(
 
 // tell the app to use the above rules
 app.use(router);
-
+router.use('*', serverRenderer);
 // start the app
 Loadable.preloadAll().then(() => {
     app.listen(PORT, (error) => {

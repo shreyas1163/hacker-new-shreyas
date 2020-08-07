@@ -1,0 +1,21 @@
+.container-color {
+    background-color: #F6F6EF;
+}
+.data {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border: 3px solid #ff6600;
+}
+.displaySpinner {
+    position: relative;
+    background-color: #F6F6EF;
+    text-align: center;
+    width: 100%;
+    Height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color:#ff6600;
+}
