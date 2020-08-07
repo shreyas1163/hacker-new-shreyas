@@ -4,7 +4,7 @@ import express from 'express';
 import serverRenderer from './middleware/renderer';
 import Loadable from 'react-loadable';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.port||'8080';;
 const path = require('path');
 
 // initialize the application and create the routes
