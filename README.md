@@ -1,4 +1,4 @@
-## Hello Welecome Hacker New Clone by Shreyas R.
+## Hello Welecome Hacker News Clone by Shreyas R.
 
 ## Technology Stack used for the App are :
   
