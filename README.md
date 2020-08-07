@@ -2,14 +2,14 @@
 
 ## Technology Stack used for the App are :
   
-  ### Server Side rendering by Nodejs.
-  ### ReactJs Library for app development.
-  ### Sagas for side-effects.
-  ### C3.js Library for graphical data representation.
-  ### Jenkins to attain CI/CD. 
+  ### `Server Side rendering by Nodejs.`
+  ### `ReactJs Library for app development.`
+  ### `Sagas for side-effects.`
+  ### `C3.js Library for graphical data representation.`
+  ### `Jenkins to attain CI/CD. `
 
-## Node version required: 12.13.0
-## React version: 16.13.1
+## `Node version required: 12.13.0`
+## `React version: 16.13.1`
 
 
 ## Available Scripts
