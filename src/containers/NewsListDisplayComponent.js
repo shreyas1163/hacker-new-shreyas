@@ -23,9 +23,9 @@ export class NewsListDisplay extends React.Component {
                 <Table responsive hover="true">
                     <thead>
                         <tr>
-                        <th >Comments</th>
-                        <th>Vote count </th>
-                        <th>upVote </th>
+                        <th>Comments</th>
+                        <th>Vote count</th>
+                        <th>upVote</th>
                         <th>News Details</th>
                         </tr>
                     </thead>
