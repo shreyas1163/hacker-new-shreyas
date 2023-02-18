@@ -9,7 +9,7 @@ import App from '../../src/components/App';
 import newsReducer from '../../src/reducers';
 import rootSaga from '../../src/sagas';
 import { matchRoutes } from 'react-router-config';
-import Routes from '../../src/routes';
+import myRoutes from '../../src/routes';
 
 
 
@@ -23,7 +23,7 @@ export default (req, res, next) => {
     var context = [];
     var html = [];
     let promises = [];
-    const matchingRoutes = matchRoutes(Routes, req.url);    
+    const matchingRoutes = matchRoutes(myRoutes, req.url);    
     matchingRoutes.forEach(route => {
         if (route.loadData) {
           promises.push(route);

@@ -6,7 +6,7 @@ import NotFound from './containers/NotFoundPageComponent';
 
 let newsListWrapper =(routerProps)=><NewsList {...routerProps} value={routerProps}/>
 let newsWrapper=()=><NewsList/>
-const Routes = [
+const myRoutes= [
   {
     path: '/',
     exact: true,
@@ -22,4 +22,4 @@ const Routes = [
   }
 ];
 
-export default Routes;
+export default myRoutes;
